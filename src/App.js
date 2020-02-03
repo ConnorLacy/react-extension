@@ -63,8 +63,10 @@ function App() {
     chrome.runtime.onMessage.addListener((action) => {
       switch (action.type){
         case 'filter-by-duration': {
-          console.log('Received click event from context menu')
-          break
+          const filter = filterByDuration({min: 10, max: 15});
+          filter();
+          window.addEventListener("scroll", filter);
+          break;
         }
         default:
           break
