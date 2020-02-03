@@ -3,10 +3,6 @@
   "version": "1.0.1",
   "name": "React Chrome Extension",
   "content_security_policy": "script-src 'self' 'sha256-xr+HqUtnq8KF3IBn+TQ37Vz0elxg11bPYmNJy5M/p38='; object-src 'self'",
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
